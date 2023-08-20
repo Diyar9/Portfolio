@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------------------WINDOW-SCROLL -----------------------*/
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #B68819;
+    border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #FFBD20;
+}
+
+
+/* ----------------------------- NAVBAR-----------------------------*/
+nav {
+    background-color: black;
+    width: 5em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+/*------------------------------ BURGER-MENU ----------------------------*/
+
+.burger-menu {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    position: relative;
+}
+
+.burger-bar {
+    width: 3em;
+    height: 0.25rem;
+    background-color: white;
+    border-radius: 0.5em;
+    margin: 0.3em 0;
+}
+
+.burger-bar.middle {
+    width: 75%;
+}
+
+.burger-bar.clicked:nth-child(1) {
+    transform: rotate(-45deg) translate(-0.55em, 0.625em);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+    opacity: 0;
+    transform: scale(0.1);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+    transform: rotate(45deg) translate(-0.55em, -0.625em);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.unclicked {
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+/*------------------------------ MENU -------------------------------*/
+
+
+.menu {
+    width: 25%;
+    height: 100vh;
+    background: linear-gradient(to left, rgba(0, 0, 0, 1) 76%, rgba(244, 249, 244, 1) 200%);
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    transition: transform 1s ease-in-out, width 1s ease-in-out; /* Add width transition */
+}
+
+.menu.visible {
+    transform: translateX(0%);
+}
+
+.menu.hidden {
+    transform: translateX(100%);
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 25px;
+    padding: 0;
+}
+
+.links li {
+    font-family: 'Noto Sans Thai Looped', sans-serif;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    padding: 28px;
+    position: relative;
+    list-style: none;
+}
+
+.links li a {
+    text-decoration: none;
+    /* Remove default link underline */
+    color: inherit;
+    /* Inherit text color from parent li */
+    position: relative;
+    transition: color 0.3s;
+}
+
+.links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    /* Start with width 0 */
+    height: 5px;
+    border-radius: 0.5em;
+    background-color: #FFBD20;
+    opacity: 0;
+    /* Start with opacity 0 */
+    transform-origin: bottom right;
+    transition: width 0.3s, opacity 0.3s, transform 0.3s;
+    /* Transitions for width, opacity, and transform */
+}
+
+.links li a:hover::after {
+    width: 100%;
+    /* Expand the width on hover */
+    opacity: 1;
+    /* Show the underline on hover */
+    transform: scaleX(1);
+    /* Expand the underline width on hover */
+}
+
+
+/*------------------------------ SCROLL-BAR -------------------------------*/
+
+.scroll-bar {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-outside {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    border: 2px solid #B68819;
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.circle-primary {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FFBD20;
+    transition: all 0.5s ease-in-out;
+    /* Add transition for background color */
+}
+
+.circle-outside.clicked {
+    width: 31px;
+    height: 31px;
+}
+
+/*
+.circle-outside.unclicked .circle-primary.visible {
+
+}
+
+.circle-outside.unclicked .circle-primary.hidden {
+}
+*/
+
+/*-------------------------------- PAGE-BAR ---------------------------------*/
+
+.page-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-number {
+    font-family: 'Noto Sans Thai Looped', sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+
+
+/* -------------- TOOLS -----------------*/
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: inherit;
+}
