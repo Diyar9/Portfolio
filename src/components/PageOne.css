@@ -1,0 +1,77 @@
+.box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.name {
+    font-family: 'Noto Sans Thai Looped', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: 300px;
+    left: 166px;
+}
+
+.title {
+    font-family: 'Noto Sans Thai Looped', sans-serif;
+    font-size: 93px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: 352px;
+    left: 166px;
+}
+
+.highlight-text {
+    color: #FFBD20;
+}
+
+.subtitle {
+    font-family: 'Noto Sans Thai Looped', sans-serif;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: 442px;
+    left: 166px;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 520px;
+    left: 154px;
+}
+
+.social-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #414141;
+    margin: 0 12px;
+    position: relative;
+}
+
+.social-item svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,5 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar'
+import PageOne from './components/PageOne'
+import PageTwo from './components/PageTwo';
 import React, { useRef } from 'react'
 
 function App() {
@@ -25,10 +27,10 @@ function App() {
   return (
     <div>
       <Navbar sections={sections} scrollHandler={scrollHandler} />
-      <div className='content' ref={section1}>About</div>
-      <div className='content' ref={section2}>Skills</div>
-      <div className='content' ref={section3}>Experience</div>
-      <div className='content' ref={section4}>Project</div>
+      <div className='page-one' ref={section1}><PageOne /></div>
+      <div className='page-two' ref={section2}><PageTwo /></div>
+      <div className='page-three' ref={section3}>Experience</div>
+      <div className='page-four' ref={section4}>Project</div>
     </div>
   );
 }

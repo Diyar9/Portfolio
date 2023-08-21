@@ -1,0 +1,107 @@
+.skill.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.skill-title {
+    font-family: 'Noto Sans Thai Looped', sans-serif;
+    font-size: 93px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(100vh + 75px);
+    left: 240px;
+    color: white;
+    position: absolute;
+}
+
+.sub-text {
+    font-family: 'Noto Sans Thai Looped', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0.5;
+    position: absolute;
+}
+
+#front {
+    top: calc(100vh + 200px);
+    left: 240px;
+}
+
+#back {
+    top: calc(100vh + 300px);
+    left: 240px;
+}
+
+#agile {
+    top: calc(100vh + 400px);
+    left: 240px;
+}
+
+.front-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(100vh + 200px);
+    left: 480px;
+}
+
+.front-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid yellow;
+    margin: 0 31px;
+    position: relative;
+}
+
+.back-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(100vh + 300px);
+    left: 480px;
+}
+
+.back-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid yellow;
+    margin: 0 31px;
+    position: relative;
+}
+
+.agile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(100vh + 400px);
+    left: 540px;
+}
+
+.agile-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid yellow;
+    margin: 0 93px;
+    position: relative;
+}
