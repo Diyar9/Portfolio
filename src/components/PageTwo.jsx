@@ -20,9 +20,7 @@ const PageTwo = () => {
                     <h2>FRONT-END</h2>
                 </div>
                 <div className='front-container'>
-                    <div className='front-item'>
-                        <img src='sk' alt="HTML-icon" /> {/*Här */}
-                    </div> 
+                    <div className='front-item'><img src="C:\Users\Pc\portfolio\public\skillsIcon\icons8-html-50.png" alt="" /></div>
                     <div className='front-item'></div>
                     <div className='front-item'></div>
                     <div className='front-item'></div>
@@ -47,7 +45,6 @@ const PageTwo = () => {
                     <div className='agile-item'></div>
                     <div className='agile-item'></div>
                 </div>
-
             </div>
         </div>
     );
