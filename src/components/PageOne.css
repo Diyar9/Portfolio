@@ -39,6 +39,7 @@
 .subtitle {
     font-family: 'Noto Sans Thai Looped', sans-serif;
     font-size: 13px;
+    text-transform: capitalize;
     display: flex;
     justify-content: center;
     align-items: center;
