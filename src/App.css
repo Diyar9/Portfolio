@@ -7,17 +7,17 @@
 .page-two {
     width: 100%;
     height: 100vh;
-    background-color: grey; 
+    background-color: #414141; 
 }
 
 .page-three {
     width: 100%;
     height: 100vh;
-    background-color: grey; 
+    background-color: pink; 
 }
 
 .page-four {
     width: 100%;
     height: 100vh;
-    background-color: grey; 
+    background-color: turquoise; 
 }
