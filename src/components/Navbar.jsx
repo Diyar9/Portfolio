@@ -56,26 +56,26 @@ const Navbar = ({ sections, scrollHandler }) => {
         scrollHandler(sections[index].ref); // Scroll to the section's top position
         setCurrentPrimaryIndex(index); // Update primary circle
     };
-    
-    
-    
+
+
+
     useEffect(() => {
         const handleScroll = () => {
             // Calculate the current active section based on the scroll position
             const scrollTop = window.scrollY;
             const windowHeight = window.innerHeight;
-        
+
             const newActiveSectionIndex = sections.findIndex(section => {
                 const sectionTop = section.ref.current.offsetTop;
                 const sectionBottom = sectionTop + section.ref.current.offsetHeight;
                 return scrollTop >= sectionTop - windowHeight / 2 && scrollTop < sectionBottom - windowHeight / 2;
             });
-        
+
             if (newActiveSectionIndex !== -1) {
                 setActiveSectionIndex(newActiveSectionIndex);
                 setCurrentPrimaryIndex(newActiveSectionIndex); // Update primary circle
             }
-        
+
             // Update circleStates based on activeSectionIndex
             const newCircleStates = sections.map((_, i) => i === newActiveSectionIndex);
             setCircleStates(newCircleStates);
@@ -127,16 +127,13 @@ const Navbar = ({ sections, scrollHandler }) => {
                 </div>
 
                 <div className={scroll_class}>
-    {sections.map((section, index) => (
-        <div className={`circle-outside ${index === currentPrimaryIndex ? "clicked" : ""}`} key={index} onClick={() => handleCircleClick(index)}>
-            <div className={index === currentPrimaryIndex ? circle_class_primary : ""}></div>
-        </div>
-    ))}
-</div>
-
-
-
-
+                    {sections.map((section, index) => (
+                        <div className={`circle-outside ${index === currentPrimaryIndex ? "clicked" : ""}`} key={index} onClick={() => handleCircleClick(index)}>
+                            <div className={index === currentPrimaryIndex ? circle_class_primary : ""}></div>
+                        </div>
+                    ))}
+                </div>
+                
                 <div className={page_class}>
                     <div className={number_class}>
                         <p>1 | {sections.length}</p>
