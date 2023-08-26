@@ -10,6 +10,30 @@ const PageTwo = () => {
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@700&display=swap" rel="stylesheet" />
             </Helmet>
+            <div className='text-box'>
+                <div className="text-column"><h3><span className='highlight-text'>Skills</span></h3></div>
+                <div className="text-column"><h2>What i am great at</h2></div>
+                <div className="text-column"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem facere quibusdam nulla nesciunt inventore, sequi cupiditate quaerat explicabo ad! Est labore adipisci, suscipit maxime dolores eaque cum dicta ad fugit.</p></div>
+            </div>
+            <div className="skill-box">
+                <div className="skill-column">
+                    <img src=".\SkillIcon\icons8-frontend-100.png" alt="Frontend" />
+                    <h2>Frontend/Backend</h2>
+                </div>
+                <div className="skill-column">
+                    <img src=".\SkillIcon\icons8-database-100.png" alt="Database" />
+                    <h2>Database</h2>
+                </div>
+                <div className="skill-column">
+                    <img src=".\SkillIcon\icons8-agile-100.png" alt="Agile" />
+                    <h2>Agile methods</h2>
+                </div>
+                <div className="skill-column">
+                    <img src=".\SkillIcon\icons8-other-100.png" alt="Other" />
+                    <h2>Other</h2>
+                </div>
+            </div>
+            {/*
             <div className='page2-title'><h1>Current skills</h1></div>
             <div className='skill-box'>
                 <div className="skill-column">
@@ -131,83 +155,7 @@ const PageTwo = () => {
                     <p>Requirement management</p>
                 </div>
 
-            </div>
-
-            {/*<div className='skill-container'>
-                <div className='skill-title'>
-                    <h6>CURRENT <span className='highlight-text'>SKILL</span></h6>
-                </div>
-
-                <div className='sub-text' id='front'>
-                    <h2>FRONT-END</h2>
-                </div>
-                <div className='front-container'>
-                    <div className='front-item'>
-                        <img src=".\skillsIcon\icons8-html-50.png" alt="html-icon" />
-                        <h5>HTML</h5>
-                    </div>
-                    <div className='front-item'>
-                        <img id='css-icon' src=".\skillsIcon\icons8-css-50.png" alt="css-icon" />
-                        <h5>CSS</h5>
-                    </div>
-                    <div className='front-item'>
-                        <img src=".\skillsIcon\icons8-javascript-50.png" alt="js-icon" />
-                        <h5>JavaScript</h5>
-                    </div>
-                    <div className='front-item'>
-                        <img src=".\skillsIcon\icons8-react-native-50.png" alt="react-icon" />
-                        <h5>React</h5>
-                    </div>
-                </div>
-
-                <div className='sub-text' id='back'>
-                    <h2>BACK-END</h2>
-                </div>
-                <div className='back-container'>
-                    <div className='back-item' id='row1'>
-                        <img src=".\skillsIcon\icons8-java-50.png" alt="java-icon" />
-                        <h5>Java</h5>
-                    </div>
-                    <div className='back-item' id='row1'>
-                        <img src=".\skillsIcon\icons8-c-50.png" alt="c#-icon" />
-                        <h5>C#</h5>
-                    </div>
-                    <div className='back-item' id='row1'>
-                        <img src=".\skillsIcon\icons8-.net-framework-50 (1).png" alt=".NET-icon" />
-                        <h5>.NET Core</h5>
-                    </div>
-                    <div className='back-item' id='row1'>
-                        <img src=".\skillsIcon\blazorpng.png" alt="Blazor" />
-                        <h5>Blazor</h5>
-                    </div>
-                    <div className='back-item' id='row2'>
-                        <img src=".\skillsIcon\mvcpng.png" alt="MVC" />
-                        <h5>MVC</h5>
-                    </div>
-                    <div className='back-item' id='row2'>
-                        <img src=".\skillsIcon\icons8-mysql-50.png" alt="mysql-icon" />
-                        <h5>MySQL</h5>
-                    </div>
-                    <div className='back-item' id='row2'>
-                        <img src=".\skillsIcon\icons8-postgresql-50.png" alt="postgresql-icon" />
-                        <h5>PostgreSQL</h5>
-                    </div>
-                </div>
-
-                <div className='sub-text' id='agile'>
-                    <h2>AGILE METHODS</h2>
-                </div>
-                <div className='agile-container'>
-                    <div className='agile-item'>
-                        <img src=".\skillsIcon\icons8-scrum-50.png" alt="scrum-icon" />
-                        <h5>Scrum</h5>
-                    </div>
-                    <div className='agile-item'>
-                        <img src=".\skillsIcon\icons8-kanban-50.png" alt="kanban-icon" />
-                        <h5>Kanban</h5>
-                    </div>
-                </div>
-    </div>*/}
+            </div>*/}
 
         </div>
     );
