@@ -11,8 +11,8 @@ const PageTwo = () => {
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@700&display=swap" rel="stylesheet" />
             </Helmet>
             <div className='text-box'>
-                <div className="text-column"><h3><span className='highlight-text'>Skills</span></h3></div>
-                <div className="text-column"><h2>What i am great at</h2></div>
+                <div className="text-column"><h2>Skills</h2></div>
+                <div className="text-column"><h3>What i am <span className='highlight-text'>great</span> at</h3></div>
                 <div className="text-column"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem facere quibusdam nulla nesciunt inventore, sequi cupiditate quaerat explicabo ad! Est labore adipisci, suscipit maxime dolores eaque cum dicta ad fugit.</p></div>
             </div>
             <div className="skill-box">

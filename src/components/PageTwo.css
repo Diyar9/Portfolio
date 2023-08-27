@@ -63,9 +63,6 @@
     flex-direction: column;
     align-items: center;
     width: auto;
-}
-
-.text-box h2, h3, p{
     color: #1A1A19;
 }
 
@@ -86,7 +83,6 @@
     align-items: center;
     flex: 25%;
     max-width: 25%;
-    width: 100px;
     height: 300px;
     background-color: #1A1A19;
     border: 5px solid #DFDFD9;  
