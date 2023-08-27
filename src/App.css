@@ -1,23 +1,26 @@
+*{
+    font-family: 'Noto Sans Thai Looped', sans-serif;
+    /*border: 2px solid pink;*/
+}
+
 .page-one {
     width: 100%;
     height: 100vh;
-    background-color: black; 
+    background-color: #1A1A19;
 }
 
 .page-two {
     width: 100%;
-    height: 100vh;
-    background-color: grey; 
+    background-color: #DFDFD9; 
 }
 
 .page-three {
     width: 100%;
-    height: 100vh;
-    background-color: grey; 
+    background-color: #1A1A19; 
 }
 
 .page-four {
     width: 100%;
     height: 100vh;
-    background-color: grey; 
+    background-color: turquoise; 
 }
