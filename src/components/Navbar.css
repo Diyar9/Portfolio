@@ -59,7 +59,7 @@ nav {
 .burger-bar {
     width: 3em;
     height: 0.25rem;
-    background-color: white;
+    background-color: #F9F8F4;
     border-radius: 0.5em;
     margin: 0.3em 0;
 }
@@ -95,7 +95,7 @@ nav {
 .menu {
     width: 25%;
     height: 100vh;
-    background: linear-gradient(to left, #1A1A19 76%, rgba(244, 249, 244, 1) 200%);
+    background: linear-gradient(to left, #1A1A19 76%, #F9F8F4 200%);
     position: fixed;
     right: 0;
     top: 0;
@@ -124,7 +124,7 @@ nav {
 .links li {
     font-family: 'Noto Sans Thai Looped', sans-serif;
     font-size: 36px;
-    color: white;
+    color: #DFDFD9;
     cursor: pointer;
     padding: 28px;
     position: relative;

@@ -1,5 +1,6 @@
 *{
     font-family: 'Noto Sans Thai Looped', sans-serif;
+    /*border: 2px solid pink;*/
 }
 
 .page-one {
@@ -15,8 +16,7 @@
 
 .page-three {
     width: 100%;
-    height: calc(100vh + 155vh);
-    background-color: #F9F8F4; 
+    background-color: #1A1A19; 
 }
 
 .page-four {
