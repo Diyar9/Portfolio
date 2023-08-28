@@ -11,6 +11,16 @@ const PageOne = () => {
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@700&display=swap" rel="stylesheet" />
             </Helmet>
+            {/*<div className="icon-box">
+                <div className="icon-item">
+                    <img src=".\ExperienceIcon\diyar.png" alt="" />
+                </div>
+            </div>
+            <div className="content-box">
+                <div className="content-column">1</div>
+                <div className="content-column">2</div>
+                <div className="content-column">3</div>
+    </div>*/}
             <div className='box'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="1105" height="559" fill="none" viewBox="0 0 1105 559">
                     <path fill="#FFBD20" d="M797.5 333.25a3.5 3.5 0 1 0-7 0h7Zm-7 0v225h7v-225h-7Z" />
