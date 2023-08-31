@@ -47,7 +47,7 @@ const PageThree = () => {
                     <div className="experience-column-text"><h3>May, Internship at Combitech AB as a <span className='highlight-text'>system developer</span> in Gothenburg.</h3></div>
                 </div>
                 <div className="experience-column">
-                    <img src=".\ExperienceIcon\Combitech.rgb_.png" alt="Combitech" />
+                    <img src=".\ExperienceIcon\Combitech.jpg" alt="Combitech" />
                 </div>
                 <div className="experience-column">
                     <img src=".\ExperienceIcon\sileon.jpg" alt="Sileon" />
