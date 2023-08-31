@@ -43,7 +43,7 @@
     height: 50%;
 }
 
-.img-column-main{
+.img-column-main {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -99,15 +99,41 @@
 }
 
 .img-row {
-    max-width: 33.33%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
     height: 100%;
-    opacity: 1;
-    cursor: pointer;
-    object-fit: cover;
 }
 
-.img-row:hover {
-    opacity: 0.3;
+.img-row-main {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.img-row-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /*transition: opacity 0.3s ease-in-out;*/
+}
+
+.img-row-overlay img {
+    max-width: 55%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.img-row-overlay:hover {
+    opacity: 1;
 }
 
 .row-box {

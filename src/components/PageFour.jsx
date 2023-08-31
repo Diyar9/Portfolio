@@ -103,21 +103,36 @@ const PageFour = () => {
 
                 <div className="project-column">
                     <div className="project-row">
-                        <img className='img-row' src=".\ProjectIcon\Kalkylator.png" alt="Kalkylator" />
+                        <div className='img-row'>
+                            <img className='img-row-main' src=".\ProjectIcon\Kalkylator.png" alt="Calculator" />
+                            <div className='img-row-overlay'>
+                                <img src="./ProjectIcon/readmore-right.png" alt="Read more" />
+                            </div>
+                        </div>
                         <div className="row-box">
                             <div className="row-item"><h2><span className='highlight-text'>Calculator</span></h2></div>
                             <div className="row-item"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, provident recusandae. In illum expedita, quidem cupiditate pariatur quo iste odio, sapiente perferendis provident maiores explicabo corrupti natus veritatis voluptates laboriosam.</p></div>
                         </div>
                     </div>
                     <div className="project-row">
-                        <img className='img-row' src=".\ProjectIcon\ProcentKalkylator.png" alt="ProjectKalkylator" />
+                        <div className='img-row'>
+                            <img className='img-row-main' src=".\ProjectIcon\ProcentKalkylator.png" alt="PercentageCalculator" />
+                            <div className='img-row-overlay'>
+                                <img src="./ProjectIcon/readmore-right.png" alt="Read more" />
+                            </div>
+                        </div>
                         <div className="row-box">
                             <div className="row-item"><h2><span className='highlight-text'>Percentage Calculator</span></h2></div>
                             <div className="row-item"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, provident recusandae. In illum expedita, quidem cupiditate pariatur quo iste odio, sapiente perferendis provident maiores explicabo corrupti natus veritatis voluptates laboriosam.</p></div>
                         </div>
                     </div>
                     <div className="project-row">
-                        <img className='img-row' src=".\ProjectIcon\TemperaturOmvandlare.png" alt="TemperaturOmvandlare" />
+                        <div className='img-row'>
+                            <img className='img-row-main' src=".\ProjectIcon\TemperaturOmvandlare.png" alt="TemperatureConverter" />
+                            <div className='img-row-overlay'>
+                                <img src="./ProjectIcon/readmore-right.png" alt="Read more" />
+                            </div>
+                        </div>
                         <div className="row-box">
                             <div className="row-item"><h2><span className='highlight-text'>Temperature Converter</span></h2></div>
                             <div className="row-item"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, provident recusandae. In illum expedita, quidem cupiditate pariatur quo iste odio, sapiente perferendis provident maiores explicabo corrupti natus veritatis voluptates laboriosam.</p></div>
