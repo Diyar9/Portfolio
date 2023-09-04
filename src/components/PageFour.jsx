@@ -1,153 +1,175 @@
-import React, { useState } from 'react';
 import './PageFour.css';
-import { Helmet } from 'react-helmet-async'
 
-const PageFour = () => {
+import React, { useState } from 'react';
+
+const ProjectColumn = ({ title, description, imgSrc, tools, repoLink, imgRepo, imgDate }) => {
+    const [isOverlayVisible, setOverlayVisible] = useState(false);
+    const [overlayClass, setOverlayClass] = useState('img-column-second unclicked');
+
+    const handleOverlayClick = () => {
+        setOverlayVisible(!isOverlayVisible);
+        setOverlayClass(isOverlayVisible ? 'img-column-second unclicked' : 'img-column-second clicked');
+    };
+
     return (
-        <div className="page4">
-            <Helmet>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-                <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@700&display=swap" rel="stylesheet" />
-            </Helmet>
-            <div className='text-box'>
-                <div className="text-column"><h2>Projects</h2></div>
-                <div className="text-column"><h3>Dive into my <span className='highlight-text'>Work</span></h3></div>
-                <div className="text-column"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem facere quibusdam nulla nesciunt inventore, sequi cupiditate quaerat explicabo ad! Est labore adipisci, suscipit maxime dolores eaque cum dicta ad fugit.</p></div>
+        <div className={`project-column fade-in scroll-in ${isOverlayVisible ? 'overlay-visible' : ''}`}>
+            <div className={`tools-column ${isOverlayVisible ? 'visible' : 'hidden'}`}>
+                <div className="tools-wrapper">
+                    {tools.map((tool, index) => (
+                        <div key={index} className='tool-container'>
+                            <img src={tool.toolSrc} alt={tool.toolAlt} className='tool-image' />
+                            <h3 className='tools'>{tool.toolTitle}</h3>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <div className="project-box">
-                <div className="project-column">
-                    <div className='img-column'>
-                        <img className='img-column-main' src=".\ProjectIcon\Portfolio.png" alt="Portfolio" />
-                        <div className='img-column-overlay'>
-                            <img src="./ProjectIcon/readmore.png" alt="Read more" />
-                        </div>
-                    </div>
-                    <div className="column-box">
-                        <div className="column-item"><h2><span className='highlight-text'>Portfolio</span></h2></div>
-                        <div className="column-item"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, provident recusandae. In illum expedita, quidem cupiditate pariatur quo iste odio, sapiente perferendis provident maiores explicabo corrupti natus veritatis voluptates laboriosam.</p></div>
-                    </div>
+            <div className={`img-column ${isOverlayVisible ? 'overlay-visible' : ''}`}>
+                <img className='img-column-main' src={imgSrc} alt={title} />
+                <div className='img-column-overlay'>
+                    <img
+                        src="./ProjectIcon/readmore.png"
+                        alt="Read more"
+                        className={overlayClass}
+                        onClick={handleOverlayClick}
+                    />
                 </div>
-                <div className="project-column">
-                    <div className='img-column'>
-                        <img className='img-column-main' src=".\ProjectIcon\RSS.png" alt="RSS" />
-                        <div className='img-column-overlay'>
-                            <img src="./ProjectIcon/readmore.png" alt="Read more" />
-                        </div>
-                    </div>
-                    <div className="column-box">
-                        <div className="column-item"><h2><span className='highlight-text'>RSS</span></h2></div>
-                        <div className="column-item"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, provident recusandae. In illum expedita, quidem cupiditate pariatur quo iste odio, sapiente perferendis provident maiores explicabo corrupti natus veritatis voluptates laboriosam.</p></div>
-                    </div>
+                <div className='img-column-date'>
+                    <p className='img-date-item'>{imgDate}</p>
                 </div>
-                <div className="project-column">
-                    <div className='img-column'>
-                        <img className='img-column-main' src=".\ProjectIcon\MIB.png" alt="MIB" />
-                        <div className='img-column-overlay'>
-                            <img src="./ProjectIcon/readmore.png" alt="Read more" />
-                        </div>
-                    </div>
-                    <div className="column-box">
-                        <div className="column-item"><h2><span className='highlight-text'>MIB</span></h2></div>
-                        <div className="column-item"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, provident recusandae. In illum expedita, quidem cupiditate pariatur quo iste odio, sapiente perferendis provident maiores explicabo corrupti natus veritatis voluptates laboriosam.</p></div>
-                    </div>
-                </div>
-                <div className="project-column">
-                    <div className='img-column'>
-                        <img className='img-column-main' src=".\ProjectIcon\DinHatt.jpg" alt="DinHatt" />
-                        <div className='img-column-overlay'>
-                            <img src="./ProjectIcon/readmore.png" alt="Read more" />
-                        </div>
-                    </div>
-                    <div className="column-box">
-                        <div className="column-item"><h2><span className='highlight-text'>DinHatt</span></h2></div>
-                        <div className="column-item"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, provident recusandae. In illum expedita, quidem cupiditate pariatur quo iste odio, sapiente perferendis provident maiores explicabo corrupti natus veritatis voluptates laboriosam.</p></div>
-                    </div>
-                </div>
-                <div className="project-column">
-                    <div className='img-column'>
-                        <img className='img-column-main' src=".\ProjectIcon\ArtFinder.jpg" alt="ArtFinder" />
-                        <div className='img-column-overlay'>
-                            <img src="./ProjectIcon/readmore.png" alt="Read more" />
-                        </div>
-                    </div>
-                    <div className="column-box">
-                        <div className="column-item"><h2><span className='highlight-text'>ArtFinder</span></h2></div>
-                        <div className="column-item"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, provident recusandae. In illum expedita, quidem cupiditate pariatur quo iste odio, sapiente perferendis provident maiores explicabo corrupti natus veritatis voluptates laboriosam.</p></div>
-                    </div>
-                </div>
-                <div className="project-column">
-                    <div className='img-column'>
-                        <img className='img-column-main' src=".\ProjectIcon\Combitech.jpg" alt="Combitech" />
-                        <div className='img-column-overlay'>
-                            <img src="./ProjectIcon/readmore.png" alt="Read more" />
-                        </div>
-                    </div>
-                    <div className="column-box">
-                        <div className="column-item"><h2><span className='highlight-text'>ATMS Light</span></h2></div>
-                        <div className="column-item"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, provident recusandae. In illum expedita, quidem cupiditate pariatur quo iste odio, sapiente perferendis provident maiores explicabo corrupti natus veritatis voluptates laboriosam.</p></div>
-                    </div>
-                </div>
-                <div className="project-column">
-                    <div className='img-column'>
-                        <img className='img-column-main' src=".\ProjectIcon\Sileon.jpg" alt="Sileon" />
-                        <div className='img-column-overlay'>
-                            <img src="./ProjectIcon/readmore.png" alt="Read more" />
-                        </div>
-                    </div>
-                    <div className="column-box">
-                        <div className="column-item"><h2><span className='highlight-text'>Sileon</span></h2></div>
-                        <div className="column-item"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, provident recusandae. In illum expedita, quidem cupiditate pariatur quo iste odio, sapiente perferendis provident maiores explicabo corrupti natus veritatis voluptates laboriosam.</p></div>
-                    </div>
-                </div>
-
-                <div className="project-column">
-                    <div className="project-row">
-                        <div className='img-row'>
-                            <img className='img-row-main' src=".\ProjectIcon\Kalkylator.png" alt="Calculator" />
-                            <div className='img-row-overlay'>
-                                <img src="./ProjectIcon/readmore-right.png" alt="Read more" />
-                            </div>
-                        </div>
-                        <div className="row-box">
-                            <div className="row-item"><h2><span className='highlight-text'>Calculator</span></h2></div>
-                            <div className="row-item"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, provident recusandae. In illum expedita, quidem cupiditate pariatur quo iste odio, sapiente perferendis provident maiores explicabo corrupti natus veritatis voluptates laboriosam.</p></div>
-                        </div>
-                    </div>
-                    <div className="project-row">
-                        <div className='img-row'>
-                            <img className='img-row-main' src=".\ProjectIcon\ProcentKalkylator.png" alt="PercentageCalculator" />
-                            <div className='img-row-overlay'>
-                                <img src="./ProjectIcon/readmore-right.png" alt="Read more" />
-                            </div>
-                        </div>
-                        <div className="row-box">
-                            <div className="row-item"><h2><span className='highlight-text'>Percentage Calculator</span></h2></div>
-                            <div className="row-item"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, provident recusandae. In illum expedita, quidem cupiditate pariatur quo iste odio, sapiente perferendis provident maiores explicabo corrupti natus veritatis voluptates laboriosam.</p></div>
-                        </div>
-                    </div>
-                    <div className="project-row">
-                        <div className='img-row'>
-                            <img className='img-row-main' src=".\ProjectIcon\TemperaturOmvandlare.png" alt="TemperatureConverter" />
-                            <div className='img-row-overlay'>
-                                <img src="./ProjectIcon/readmore-right.png" alt="Read more" />
-                            </div>
-                        </div>
-                        <div className="row-box">
-                            <div className="row-item"><h2><span className='highlight-text'>Temperature Converter</span></h2></div>
-                            <div className="row-item"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, provident recusandae. In illum expedita, quidem cupiditate pariatur quo iste odio, sapiente perferendis provident maiores explicabo corrupti natus veritatis voluptates laboriosam.</p></div>
-                        </div>
-                    </div>
+            </div>
+            <div className={`column-box ${isOverlayVisible ? 'hidden' : 'visible'}`}>
+                <div className="column-item"><h2><span className='highlight-text'>{title}</span></h2></div>
+                <div className="column-item"><p>{description}</p></div>
+                <div className="column-item" id='githubRepoItem'>
+                    <a href={repoLink}><img src={imgRepo} alt={title} /></a>
                 </div>
             </div>
         </div>
     );
 };
 
-export default PageFour;
+const PageFour = () => {
+    return (
+        <div className="page4">
+            <div className="project-title-box fade-in scroll-in">
+                <div className="project-title-column"><h2>projects</h2></div>
+                <div className="project-title-column"><h3>What i have <span className='highlight-text'>created</span></h3></div>
+            </div>
+            <div className="project-box">
+                <ProjectColumn
+                    tools={[
+                        { toolSrc: './SkillIcon/icons8-html-100.png', toolAlt: 'HTML', toolTitle: 'HTML' },
+                        { toolSrc: './SkillIcon/icons8-css-100.png', toolAlt: 'CSS', toolTitle: 'CSS' },
+                        { toolSrc: './SkillIcon/icons8-react-native-gradient-100.png', toolAlt: 'React', toolTitle: 'React' },
+                        { toolSrc: './SkillIcon/icons8-javascript-100.png', toolAlt: 'JavaScript', toolTitle: 'JavaScript' },
+                        { toolSrc: './SkillIcon/icons8-git-100.png', toolAlt: 'Git', toolTitle: 'Git' },
+                        { toolSrc: './SkillIcon/github.png', toolAlt: 'Github', toolTitle: 'Github' },
+                        { toolSrc: './SkillIcon/icons8-figma-100.png', toolAlt: 'Figma', toolTitle: 'Figma' }
+                    ]}
+                    githubSrc="C:\Users\Pc\portfolio\public\SkillIcon\github.png"
+                    title="Portfolio"
+                    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+                    imgSrc=".\ProjectIcon\Portfolio.png"
+                    imgDate="2023-07-24"
+                    repoLink={"https://github.com/Diyar9/portfolio"}
+                    imgRepo={"./SkillIcon/github.png"}
+                />
+                <ProjectColumn
+                    tools={[
+                        { toolSrc: './SkillIcon/icons8-excel-100.png', toolAlt: 'Excel', toolTitle: 'Excel' },
+                    ]}
+                    githubSrc="./ProjectIcon/readmore.png"
+                    title="Sileon"
+                    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+                    imgSrc=".\ProjectIcon\Sileon.jpg"
+                    imgDate="2023-06-07"
+                    repoLink={"https://docs.google.com/spreadsheets/d/e/2PACX-1vRTOHbGDj0Oq3As5Xtxuk7znCUYSe_u5XZWVz1L_1wajlK2MKZv7UQTzlHPBXtLVGxXug1Z5T88oSoN/pub?output=pdf"}
+                    imgRepo={"./SkillIcon/icons8-more-100.png"}
+                />
+                <ProjectColumn
+                    tools={[
+                        { toolSrc: './SkillIcon/c-sharp.png', toolAlt: 'C#', toolTitle: 'C#' },
+                        { toolSrc: './SkillIcon/icons8-html-100.png', toolAlt: 'HTML', toolTitle: 'HTML' },
+                        { toolSrc: './SkillIcon/icons8-css-100.png', toolAlt: 'CSS', toolTitle: 'CSS' },
+                        { toolSrc: './SkillIcon/icons8-javascript-100.png', toolAlt: 'JavaScript', toolTitle: 'JavaScript' },
+                        { toolSrc: './SkillIcon/NET_Core_Logo.svg.png', toolAlt: '.Net Core', toolTitle: '.NET Core' },
+                        { toolSrc: './SkillIcon/icons8-postgresql-100.png', toolAlt: 'PostgreSQL', toolTitle: 'PostgreSQL' },
+                        { toolSrc: './SkillIcon/Blazor.png', toolAlt: 'Blazor', toolTitle: 'Blazor' },
+                        { toolSrc: './SkillIcon/icons8-api-100.png', toolAlt: 'Rest API', toolTitle: 'RestAPI' },
+                        { toolSrc: './SkillIcon/icons8-git-100.png', toolAlt: 'Git', toolTitle: 'Git' },
+                        { toolSrc: './SkillIcon/icons8-bitbucket-100.png', toolAlt: 'Bitbucket', toolTitle: 'Bitbucket' }
+                    ]}
+                    githubSrc="./ProjectIcon/readmore.png"
+                    title="Combitech"
+                    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+                    imgSrc=".\ProjectIcon\Combitech.jpg"
+                    imgDate="2023-01-16"
+                    repoLink={"https://se370.wordpress.com/"}
+                    imgRepo={"./SkillIcon/icons8-more-100.png"}
+                />
+                <ProjectColumn
+                    tools={[
+                        { toolSrc: './SkillIcon/c-sharp.png', toolAlt: 'C#', toolTitle: 'C#' },
+                        { toolSrc: './SkillIcon/icons8-git-100.png', toolAlt: 'Git', toolTitle: 'Git' },
+                        { toolSrc: './SkillIcon/github.png', toolAlt: 'Github', toolTitle: 'Github' }
+                    ]}
+                    githubSrc="./ProjectIcon/readmore.png"
+                    title="RSS"
+                    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+                    imgSrc=".\ProjectIcon\RSS.png"
+                    imgDate="2022-10-03"
+                    repoLink={"https://github.com/Diyar9/RSS"}
+                    imgRepo={"./SkillIcon/github.png"}
+                />
+                <ProjectColumn
+                    tools={[
+                        { toolSrc: './SkillIcon/ux.png', toolAlt: 'C#', toolTitle: 'UX/UI' },
+                        { toolSrc: './SkillIcon/icons8-figma-100.png', toolAlt: 'Figma', toolTitle: 'Figma' },
+                    ]}
+                    githubSrc="./ProjectIcon/readmore.png"
+                    title="ArtFinder"
+                    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+                    imgSrc=".\ProjectIcon\ArtFinder.jpg"
+                    imgDate="2022-05-02"
+                    repoLink={"https://x6m2nsc5cn.wixsite.com/artfinder"}
+                    imgRepo={"./SkillIcon/icons8-more-100.png"}
+                />
+                <ProjectColumn
+                    tools={[
+                        { toolSrc: './SkillIcon/c-sharp.png', toolAlt: 'C#', toolTitle: 'C#' },
+                        { toolSrc: './SkillIcon/MSSQL.png', toolAlt: 'MSSQL', toolTitle: 'MSSQL' },
+                        { toolSrc: './SkillIcon/icons8-scrum-100.png', toolAlt: 'Scrum', toolTitle: 'Scrum' },
+                        { toolSrc: './SkillIcon/icons8-kanban-100.png', toolAlt: 'Kanban', toolTitle: 'Kanban' },
+                        { toolSrc: './SkillIcon/icons8-poker-100.png', toolAlt: 'Planning poker', toolTitle: 'Planning poker' },
+                        { toolSrc: './SkillIcon/icons8-git-100.png', toolAlt: 'Git', toolTitle: 'Git' },
+                        { toolSrc: './SkillIcon/github.png', toolAlt: 'Github', toolTitle: 'Github' }
+                    ]}
+                    githubSrc="./ProjectIcon/readmore.png"
+                    title="DinHatt"
+                    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+                    imgSrc=".\ProjectIcon\DinHatt.png"
+                    imgDate="2022-03-28"
+                    repoLink={"https://dinhatt.blogg.se/"}
+                    imgRepo={"./SkillIcon/icons8-more-100.png"}
+                />
+                <ProjectColumn
+                    tools={[
+                        { toolSrc: './SkillIcon/icons8-java-100.png', toolAlt: 'Java', toolTitle: 'Java' },
+                        { toolSrc: './SkillIcon/mysql.png', toolAlt: 'MySQL', toolTitle: 'MySQL' },
+                        { toolSrc: './SkillIcon/icons8-git-100.png', toolAlt: 'Git', toolTitle: 'Git' },
+                        { toolSrc: './SkillIcon/github.png', toolAlt: 'Github', toolTitle: 'Github' }
+                    ]}
+                    githubSrc="./ProjectIcon/readmore.png"
+                    title="MIB"
+                    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+                    imgSrc=".\ProjectIcon\MIB.png"
+                    imgDate="2021-05-03"
+                    repoLink={"https://github.com/Diyar9/MIB"}
+                    imgRepo={"./SkillIcon/github.png"}
+                />
+            </div>
+        </div>
+    );
+};
 
-{/*<div className="column-box-mini">
-                        <div className="column-mini-item"><h2><span className='highlight-text'>Portfolio</span></h2></div>
-                        <div className="column-mini-item"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, provident recusandae. In illum expedita, quidem cupiditate pariatur quo iste odio, sapiente perferendis provident maiores explicabo corrupti natus veritatis voluptates laboriosam.</p></div>
-                        <div className="column-mini-item"><h5><span className='highlight-text'>Read more</span></h5></div>
-                    </div> */}
+export default PageFour;
