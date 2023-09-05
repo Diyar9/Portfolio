@@ -100,7 +100,8 @@ nav {
     right: 0;
     top: 0;
     z-index: 1;
-    transition: transform 1s ease-in-out, width 1s ease-in-out; /* Add width transition */
+    transition: transform 1s ease-in-out, width 1s ease-in-out;
+    /* Add width transition */
 }
 
 .menu.visible {
@@ -203,15 +204,6 @@ nav {
     height: 31px;
 }
 
-/*
-.circle-outside.unclicked .circle-primary.visible {
-
-}
-
-.circle-outside.unclicked .circle-primary.hidden {
-}
-*/
-
 /*-------------------------------- PAGE-BAR ---------------------------------*/
 
 .page-bar {
@@ -233,4 +225,36 @@ nav {
 
 .visible {
     display: inherit;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        font-size: small;
+    }
+
+    nav {
+        background-color: unset;
+        opacity: 1;
+        
+        /* Remove background color from the nav */
+    }
+
+    .scroll-bar {
+        opacity: 0;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .burger-bar.clicked:nth-child(1) {
+        transform: rotate(-45deg) translate(-0.60em, 0.625em);
+        transition: ease-out 0.5s;
+    }
+    
+    .burger-bar.clicked:nth-child(3) {
+        transform: rotate(45deg) translate(-0.65em, -0.625em);
+        transition: ease-out 0.5s;
+    }
 }

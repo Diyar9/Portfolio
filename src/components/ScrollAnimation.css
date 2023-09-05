@@ -27,11 +27,6 @@
 }
 
 /* Trigger the scroll-in animation when an element is in the viewport */
-.scroll-in-down.in-viewport {
-    transform: translateY(0);
-    opacity: 1;
-}
-
 /* Trigger the scroll-in animation when an element is in the viewport */
 .scroll-in-left.in-viewport-left {
     transform: translateX(0);
@@ -40,5 +35,10 @@
 
 .scroll-in-right.in-viewport-right {
     transform: translateX(0);
+    opacity: 1;
+}
+
+.scroll-in-down.in-viewport-down {
+    transform: translateY(0);
     opacity: 1;
 }
