@@ -1,0 +1,44 @@
+/* CSS for fade-in animation */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* CSS for scroll animation from left (X-50px) */
+.scroll-in-left {
+    transform: translateX(-50px);
+    /* Initial position off-screen to the left */
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* CSS for scroll animation from right (X50px) */
+.scroll-in-right {
+    transform: translateX(50px);
+    /* Initial position off-screen to the right */
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.scroll-in-down {
+    transform: translateY(-50px); /* Initial position off-screen above */
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Trigger the scroll-in animation when an element is in the viewport */
+.scroll-in-down.in-viewport {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Trigger the scroll-in animation when an element is in the viewport */
+.scroll-in-left.in-viewport-left {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.scroll-in-right.in-viewport-right {
+    transform: translateX(0);
+    opacity: 1;
+}
