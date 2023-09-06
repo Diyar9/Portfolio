@@ -1,5 +1,5 @@
 import './PageFour.css';
-
+import ScrollAnimation from './ScrollAnimation';
 import React, { useState } from 'react';
 
 const ProjectColumn = ({ title, description, imgSrc, tools, repoLink, imgRepo, imgDate }) => {
@@ -12,7 +12,7 @@ const ProjectColumn = ({ title, description, imgSrc, tools, repoLink, imgRepo, i
     };
 
     return (
-        <div className={`project-column fade-in scroll-in ${isOverlayVisible ? 'overlay-visible' : ''}`}>
+        <div className={`project-column ${isOverlayVisible ? 'overlay-visible' : ''}`}>
             <div className={`tools-column ${isOverlayVisible ? 'visible' : 'hidden'}`}>
                 <div className="tools-wrapper">
                     {tools.map((tool, index) => (
@@ -51,17 +51,19 @@ const ProjectColumn = ({ title, description, imgSrc, tools, repoLink, imgRepo, i
 const PageFour = () => {
     return (
         <div className="page4">
-            <div className="project-title-box fade-in scroll-in">
+            <ScrollAnimation />
+            <div className="project-title-box">
                 <div className="project-title-column"><h2>projects</h2></div>
                 <div className="project-title-column"><h3>What i have <span className='highlight-text'>created</span></h3></div>
             </div>
-            <div className="project-box">
+            <div className="project-box fade-in scroll-in-down in-viewport">
                 <ProjectColumn
                     tools={[
                         { toolSrc: './SkillIcon/icons8-html-100.png', toolAlt: 'HTML', toolTitle: 'HTML' },
                         { toolSrc: './SkillIcon/icons8-css-100.png', toolAlt: 'CSS', toolTitle: 'CSS' },
                         { toolSrc: './SkillIcon/icons8-react-native-gradient-100.png', toolAlt: 'React', toolTitle: 'React' },
                         { toolSrc: './SkillIcon/icons8-javascript-100.png', toolAlt: 'JavaScript', toolTitle: 'JavaScript' },
+                        { toolSrc: './SkillIcon/icons8-Responsive-design-100.png', toolAlt: 'Responsive design', toolTitle: 'Responsive design' },
                         { toolSrc: './SkillIcon/icons8-git-100.png', toolAlt: 'Git', toolTitle: 'Git' },
                         { toolSrc: './SkillIcon/github.png', toolAlt: 'Github', toolTitle: 'Github' },
                         { toolSrc: './SkillIcon/icons8-figma-100.png', toolAlt: 'Figma', toolTitle: 'Figma' }

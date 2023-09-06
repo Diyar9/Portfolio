@@ -1,6 +1,7 @@
 .page2 {
     margin: 0 10em;
-    padding: 2em 0;
+    padding: 1em 0;
+    overflow-x: hidden;
 }
 
 .text-box {
@@ -23,6 +24,7 @@
 }
 
 .skill-column {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,7 +33,8 @@
     max-width: 25%;
     height: 300px;
     background-color: #1A1A19;
-    border: 5px solid #DFDFD9;  
+    border: 5px solid #DFDFD9;
+    cursor: pointer;
 }
 
 .skill-column img {
@@ -40,4 +43,16 @@
 
 .skill-column h2 {
     color: #DFDFD9;
+}
+
+@media only screen and (max-width: 768px) {
+    .page2 {
+        margin: 0;
+    }
+
+    .skill-column {
+        flex: 50%;
+        max-width: 50%;
+        height: 200px;
+    }
 }

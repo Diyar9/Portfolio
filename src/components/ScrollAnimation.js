@@ -6,13 +6,19 @@ const ScrollAnimation = () => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0., // Adjust this threshold as needed
+      threshold: 0, // Adjust this threshold as needed
     };
 
     const handleIntersection = (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('in-viewport');
+          if (entry.target.classList.contains('scroll-in-left')) {
+            entry.target.classList.add('in-viewport-left');
+          } else if (entry.target.classList.contains('scroll-in-right')) {
+            entry.target.classList.add('in-viewport-right');
+          }else if (entry.target.classList.contains('scroll-in-down')) {
+            entry.target.classList.add('in-viewport-down');
+          }
           observer.unobserve(entry.target);
         }
       });
@@ -20,8 +26,8 @@ const ScrollAnimation = () => {
 
     const observer = new IntersectionObserver(handleIntersection, options);
 
-    // Observe elements with the 'scroll-in' class
-    const elements = document.querySelectorAll('.scroll-in');
+    // Observe elements with the 'scroll-in-left', 'scroll-in-right', and 'scroll-in-down' classes
+    const elements = document.querySelectorAll('.scroll-in-left, .scroll-in-right, .scroll-in-down');
     elements.forEach((element) => {
       observer.observe(element);
     });

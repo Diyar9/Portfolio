@@ -1,7 +1,7 @@
 .page4 {
     position: static;
     margin: 0 10em;
-    padding: 2em 0;
+    padding: 1em 0;
 }
 
 .project-title-box {
@@ -200,4 +200,20 @@
 
 .visible {
     display: inherit;
+}
+
+@media only screen and (max-width: 768px) {
+    .page4 {
+        margin: 0;
+    }
+
+    .project-column {
+        position: relative;
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .img-column-overlay {
+        opacity: 1;
+    }
 }
