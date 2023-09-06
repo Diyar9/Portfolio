@@ -1,0 +1,32 @@
+.page5 {
+    margin: 0 10em;
+    padding: 1em 0;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-column {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background-color: #1A1A19;
+    border: 1em solid #B68819;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .page5 {
+        margin: 0;
+    }
+}
