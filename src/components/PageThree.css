@@ -70,14 +70,13 @@
 
 .experience-line {
     position: absolute;
-    z-index: 1;
     top: 50%;
     left: 50%;
     transform: translatey(-50%);
     width: 5px;
     height: 90%;
     margin: 1em 0;
-    background: gold;
+    background: #FFBD20;
     border-radius: 25px;
 }
 
