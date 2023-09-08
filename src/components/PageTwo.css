@@ -35,6 +35,7 @@
     background-color: #1A1A19;
     border: 5px solid #DFDFD9;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .skill-column img {
@@ -45,6 +46,41 @@
     color: #DFDFD9;
 }
 
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+    margin: 3px;
+    background-color: #DFDFD9;
+    color: #1A1A19;
+    border-radius: 0.5em;
+}
+
+.skill-container h3 {
+    font-size: smaller;
+}
+
+.skill-image {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+}
+
+.skills {
+    font-size: medium;
+}
+
 @media only screen and (max-width: 768px) {
     .page2 {
         margin: 0;
@@ -53,6 +89,10 @@
     .skill-column {
         flex: 50%;
         max-width: 50%;
-        height: 200px;
+        height: 260px;
+    }
+
+    .skill-container h3 {
+        font-size: xx-small;
     }
 }

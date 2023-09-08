@@ -240,6 +240,7 @@ nav {
     }
 
     .scroll-bar {
+        pointer-events: none;
         opacity: 0;
     }
 
