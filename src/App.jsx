@@ -32,7 +32,7 @@ function App() {
   return (
     <div>
       <Navbar sections={sections} scrollHandler={scrollHandler} />
-      <div className='page-one' ref={section1}><PageOne /></div>
+      <div className='page-one' ref={section1}><PageOne scrollHandler={() => scrollHandler(section5)} /></div>
       <div className='page-two' ref={section2}><PageTwo /></div>
       <div className='page-three' ref={section3}><PageThree /></div>
       <div className='page-four' ref={section4}><PageFour /></div>
