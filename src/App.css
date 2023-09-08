@@ -25,5 +25,8 @@
 
 .page-five {
     width: 100%;
-    background-color: #B68819; 
+    background-image: url(C:\Users\Pc\portfolio\public\ContactBG\photo-1510851896000-498520af2236.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }

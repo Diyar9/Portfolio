@@ -87,15 +87,59 @@
     }
 
     .experience-line {
-        width: 2.5px;
-        height: 90%;
+        /*width: 2.5px;
+        height: 90%;*/
+        display: none;
+    }
+
+    .experience-column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .experience-column img {
+        max-width: 100%;
     }
 
     .experience-column-text {
-        font-size: 7px;
-        /* Set a minimum font size */
-        height: auto;
-        /* Allow height to adjust based on content */
+        font-size: 12px;
+    }
+
+    .experience-column-text ul {
+        font-size: 11px;
+        text-align: start;
+    }
+
+    .experience-column:nth-child(1) {
+        order: 1;
+    }
+
+    .experience-column:nth-child(2) {
+        order: 2;
+    }
+
+    .experience-column:nth-child(3) {
+        order: 4;
+    }
+
+    .experience-column:nth-child(4) {
+        order: 3;
+    }
+
+    .experience-column:nth-child(5) {
+        order: 5;
+    }
+
+    .experience-column:nth-child(6) {
+        order: 6;
+    }
+
+    .experience-column:nth-child(7) {
+        order: 8;
+    }
+
+    .experience-column:nth-child(8) {
+        order: 7;
     }
 
 }

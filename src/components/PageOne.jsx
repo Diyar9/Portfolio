@@ -3,7 +3,7 @@ import './PageOne.css';
 import { Helmet } from 'react-helmet-async'
 
 
-const PageOne = () => {
+const PageOne = (props) => {
     return (
         <div className='page'>
             <Helmet>
@@ -30,7 +30,7 @@ const PageOne = () => {
                 </div>
                 <div className="page-social">
                     <div className='social-container'>
-                        <a href="mailto: diyar.d@hotmail.com" target="_blank">
+                    <a href="#" onClick={() => props.scrollHandler()}>
                             <div className='social-item'>
                                 <img src="./SocialIcon/icons8-email-100.png" alt="Mail" />
                             </div>
