@@ -1,51 +1,51 @@
-.box {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.page {
     height: 100vh;
+}
+
+.box {
     position: relative;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+}   
+
+.page-info {
+    position: absolute;
+    top: 31%;
+    left: 11.5%;
 }
 
 .name {
-    font-family: 'Noto Sans Thai Looped', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     font-size: 20px;
     text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: absolute;
-    top: 300px;
-    left: 166px;
+    color: #DFDFD9;
 }
 
 .title {
-    font-family: 'Noto Sans Thai Looped', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     font-size: 93px;
     text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: absolute;
-    top: 352px;
-    left: 166px;
+    color: #DFDFD9;
 }
 
-.highlight-text {
-    color: #FFBD20;
-}
 
 .subtitle {
-    font-family: 'Noto Sans Thai Looped', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
     font-size: 13px;
     text-transform: capitalize;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    color: #DFDFD9;
+}
+
+.page-social {
     position: absolute;
-    top: 442px;
+    top: 65%;
     left: 166px;
 }
 
@@ -53,9 +53,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 520px;
-    left: 154px;
 }
 
 .social-item {
@@ -67,12 +64,74 @@
     border-radius: 50%;
     border: 2px solid #414141;
     margin: 0 12px;
-    position: relative;
 }
 
-.social-item svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.social-item img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+}
+
+#bigger {
+    width: 30px;
+    height: 30px;
+}
+
+.highlight-text {
+    color: #FFBD20;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .box svg{
+        max-width: 93%;
+    }
+
+    .page-info {
+        top: 23.5%;
+        left: 14.5%;;
+        width: 200px;
+    }
+
+    .name {
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 50px;
+        word-wrap: break-word; 
+    }
+
+    .subtitle {
+        word-wrap: break-word;
+        font-size: 13px;
+    }
+
+    .page-social {
+        top: 83%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    .social-item {
+        width: 45px;
+        height: 45px;
+        margin: 0 10px;
+    }
+
+    .social-item img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+    }
+
+    #bigger {
+        width: 40px;
+        height: 40px;
+        z-index: -1;
+    }
 }

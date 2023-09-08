@@ -3,6 +3,8 @@ import Navbar from './components/Navbar'
 import PageOne from './components/PageOne'
 import PageTwo from './components/PageTwo';
 import PageThree from './components/PageThree';
+import PageFour from './components/PageFour';
+import ContactMe from './components/ContactMe';
 import React, { useRef } from 'react'
 
 function App() {
@@ -11,12 +13,14 @@ function App() {
   const section2 = useRef();
   const section3 = useRef();
   const section4 = useRef();
+  const section5 = useRef();
 
   const sections = [
     { label: 'About', ref: section1 },
     { label: 'Skills', ref: section2 },
     { label: 'Experience', ref: section3 },
-    { label: 'Project', ref: section4 }
+    { label: 'Project', ref: section4 },
+    { label: 'Contact me', ref: section5 }
 
   ];
 
@@ -28,10 +32,11 @@ function App() {
   return (
     <div>
       <Navbar sections={sections} scrollHandler={scrollHandler} />
-      <div className='page-one' ref={section1}><PageOne /></div>
+      <div className='page-one' ref={section1}><PageOne scrollHandler={() => scrollHandler(section5)} /></div>
       <div className='page-two' ref={section2}><PageTwo /></div>
       <div className='page-three' ref={section3}><PageThree /></div>
-      <div className='page-four' ref={section4}>Project</div>
+      <div className='page-four' ref={section4}><PageFour /></div>
+      <div className='page-five' ref={section5}><ContactMe /></div>
     </div>
   );
 }

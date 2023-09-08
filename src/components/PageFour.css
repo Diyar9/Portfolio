@@ -1,0 +1,219 @@
+.page4 {
+    position: static;
+    margin: 0 10em;
+    padding: 1em 0;
+}
+
+.project-title-box {
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    color: #1A1A19;
+}
+
+.project-title-column {
+    width: auto;
+    text-align: center;
+}
+
+/* ---------------------TEXTBOX-----------------------*/
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    color: #1A1A19;
+}
+
+.text-column {
+    width: auto;
+    text-align: center;
+}
+
+/* ---------------------PROJECTBOX-----------------------*/
+
+.project-box {
+    display: flex;
+    flex-wrap: wrap;
+    color: #DFDFD9;
+    text-transform: capitalize;
+}
+
+.project-column {
+    position: relative;
+    flex: 33.33%;
+    max-width: 33.33%;
+    height: 400px;
+    background-color: #1A1A19;
+    border: 1em solid #DFDFD9;
+}
+
+/*TOOLS-CLASS*/
+
+.tools-column {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    width: 100%;
+    height: 50%;
+}
+
+.tools-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.tool-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 8px;
+    margin: 3px;
+    background-color: #DFDFD9;
+    color: #1A1A19;
+    border-radius: 0.5em;
+}
+
+.tool-image {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+}
+
+.tools {
+    font-size: medium;
+}
+
+/*IMG-CLASS*/
+
+.img-column {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    transition: transform 0.3s ease;
+    /* Add a smooth transition effect */
+}
+
+.img-column-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.img-column-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /*transition: opacity 0.3s ease-in-out;*/
+}
+
+.img-column-date {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.img-date-item {
+    background-color: #FFBD20;
+    color: #DFDFD9;
+    padding: 0 4px;
+    font-size: small;
+    border-radius: 0em 0em 0.5em 0em;
+}
+
+.img-column.overlay-visible {
+    transform: translateY(100%);
+    /* Move the img-column down when the overlay is visible */
+    transition: transform 0.3s ease;
+    /* Add a smooth transition effect */
+}
+
+.img-column-overlay img {
+    max-width: 15%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.img-column-overlay:hover {
+    opacity: 1;
+}
+
+.img-column-second.clicked {
+    transform: rotate(180deg);
+    transition: ease-out 0.3s;
+}
+
+.img-column-second.unclicked {
+    transform: rotate(0);
+    transition: ease-out 0.3s;
+}
+
+/*COLUMN-CLASS*/
+
+.column-box {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 50%;
+    font-size: small;
+}
+
+.column-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 4px 0;
+}
+
+#githubRepoItem img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 2em 0;
+    background-color: #DFDFD9;
+}
+
+/*-----------TOOL------------*/
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: inherit;
+}
+
+@media only screen and (max-width: 768px) {
+    .page4 {
+        margin: 0;
+    }
+
+    .project-column {
+        position: relative;
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .img-column-overlay {
+        opacity: 1;
+    }
+}

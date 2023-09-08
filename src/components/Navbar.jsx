@@ -12,20 +12,26 @@ const Navbar = ({ sections, scrollHandler }) => {
     const [isMenuClicked, setIsMenuClicked] = useState(false);
 
     const updateMenu = () => {
-        if (!isMenuClicked) {
+        if (isMenuClicked) {
+            closeMenu(); // Close the menu
+        } else {
+            // Open the menu
             setBurgerClass("burger-bar clicked");
             setMenuClass("menu visible");
             setScrollClass("scroll-bar hidden");
             setPageClass("page-bar hidden");
             document.body.style.overflow = "hidden"; // Disable scrolling
-        } else {
-            setBurgerClass("burger-bar unclicked");
-            setMenuClass("menu hidden");
-            setScrollClass("scroll-bar visible");
-            setPageClass("page-bar visible");
-            document.body.style.overflow = "auto"; // Enable scrolling
+            setIsMenuClicked(true);
         }
-        setIsMenuClicked(!isMenuClicked);
+    };
+
+    const closeMenu = () => {
+        setBurgerClass("burger-bar unclicked");
+        setMenuClass("menu hidden");
+        setScrollClass("scroll-bar visible");
+        setPageClass("page-bar visible");
+        document.body.style.overflow = "auto"; // Enable scrolling
+        setIsMenuClicked(false);
     };
 
     // TO CHANGE SCROLL CLASSES + WINDOW-SCROLL
@@ -36,30 +42,24 @@ const Navbar = ({ sections, scrollHandler }) => {
     const [currentPrimaryIndex, setCurrentPrimaryIndex] = useState(-1);
     const [activeSectionIndex, setActiveSectionIndex] = useState(-1);
 
-    /*const handleMenuClick = (index) => {
-        setIsMenuClicked(false);
-        setActiveSectionIndex(index); // Update the active section index directly
-        setCurrentPrimaryIndex(index); // Update the primary circle
-        setCircleStates(circleStates.map((_, i) => i === index)); // Update circle states
-        scrollHandler(sections[index].ref);
-    };*/
-
     const handleMenuClick = (event, index) => {
         event.preventDefault(); // Prevent the default link behavior
-        setIsMenuClicked(false);
+        closeMenu(); // Close the menu
         setCurrentPrimaryIndex(index); // Update the primary circle
         scrollHandler(sections[index].ref);
     };
-
 
     const handleCircleClick = (index) => {
         scrollHandler(sections[index].ref); // Scroll to the section's top position
         setCurrentPrimaryIndex(index); // Update primary circle
     };
 
-
-
     useEffect(() => {
+        window.addEventListener('beforeunload', () => {
+            // Scroll to the top of the page when a manual refresh is detected
+            window.scrollTo(0, 1);
+        });
+
         const handleScroll = () => {
             // Calculate the current active section based on the scroll position
             const scrollTop = window.scrollY;
@@ -103,7 +103,9 @@ const Navbar = ({ sections, scrollHandler }) => {
         window.addEventListener("scroll", handleWindowScroll);
 
         return () => {
-            window.removeEventListener("scroll", handleWindowScroll);
+            window.removeEventListener('beforeunload', () => {
+                // Remove the event listener if it's no longer needed
+            });
             document.body.style.overflow = "auto";
         };
     }, [sections, isMenuClicked, activeSectionIndex]);
