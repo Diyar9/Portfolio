@@ -125,7 +125,7 @@ const PageFour = () => {
                 />
                 <ProjectColumn
                     tools={[
-                        { toolSrc: './SkillIcon/ux.png', toolAlt: 'C#', toolTitle: 'UX/UI' },
+                        { toolSrc: './SkillIcon/ux.png', toolAlt: 'UX/UI', toolTitle: 'UX/UI' },
                         { toolSrc: './SkillIcon/icons8-figma-100.png', toolAlt: 'Figma', toolTitle: 'Figma' },
                     ]}
                     githubSrc="./ProjectIcon/readmore.png"
