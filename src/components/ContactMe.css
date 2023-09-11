@@ -1,0 +1,97 @@
+.page5 {
+    margin: 0 25em;
+    padding: 2.5em 0;
+}
+
+.contact-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A1A19;
+    overflow-x: hidden;
+}
+
+.contact-item {
+    flex: 50%;
+    max-width: 50%;
+}
+
+.contact-title {
+    text-align: center;
+    color: #F9F8F4;
+    text-transform: capitalize;
+    padding: 1em;
+}
+
+.contact-item form {
+    background: #F9F8F4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+}
+
+/*----------------FORM--------------*/
+
+.input-group {
+    position: relative;
+    margin: 1em 0;
+}
+
+.input-group__input {
+    font: inherit;
+    color: #1A1A19;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    outline: 2px solid #FFBD20; /*outline = inactive*/
+    background-color: transparent;
+    transition: outline-color 500ms;
+}
+
+.input-group__input:is(:focus, :valid) {
+    outline-color: #FFBD20; /*outline = active*/
+}
+
+.input-group__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: 10px 10px;
+    color: #FFBD20; /*lbl färg*/
+    transition: translate 500ms,
+        scale 500ms;
+}
+
+.input-group__input:focus +
+.input-group__label,
+.input-group__input:valid +
+.input-group__label {
+    padding-inline: 5px;
+    translate: 10px -14px;
+    scale: 0.8;
+    background-color: #F9F8F4; /*Bakgrunden när lbl är active*/
+}
+
+#send-btn {
+    cursor: pointer;
+    background-color: #FFBD20;
+    color: #F9F8F4;
+}
+
+@media only screen and (max-width: 991px) {
+    .page5 {
+        margin: 0 1em;
+    }
+    
+    .contact-item {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .contact-title {
+        padding: 3em;
+    }
+
+}
