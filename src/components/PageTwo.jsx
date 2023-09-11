@@ -32,7 +32,7 @@ const PageTwo = () => {
             { toolSrc: './SkillIcon/icons8-css-100.png', toolAlt: 'CSS', toolTitle: 'CSS', },
             { toolSrc: './SkillIcon/icons8-javascript-100.png', toolAlt: 'JavaScript', toolTitle: 'JavaScript', },
             { toolSrc: './SkillIcon/icons8-react-native-gradient-100.png', toolAlt: 'React', toolTitle: 'React', },
-            { toolSrc: './SkillIcon/icons8-Responsive-design-100.png', toolAlt: 'Responsive design', toolTitle: 'Responsive design' },
+            { toolSrc: './SkillIcon/icons8-responsive-design-100.png', toolAlt: 'Responsive design', toolTitle: 'Responsive design' },
         ],
         Database: [
             { toolSrc: './SkillIcon/MSSQL.png', toolAlt: 'MSSQL', toolTitle: 'MSSQL', },

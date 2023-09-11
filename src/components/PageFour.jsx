@@ -63,7 +63,7 @@ const PageFour = () => {
                         { toolSrc: './SkillIcon/icons8-css-100.png', toolAlt: 'CSS', toolTitle: 'CSS' },
                         { toolSrc: './SkillIcon/icons8-react-native-gradient-100.png', toolAlt: 'React', toolTitle: 'React' },
                         { toolSrc: './SkillIcon/icons8-javascript-100.png', toolAlt: 'JavaScript', toolTitle: 'JavaScript' },
-                        { toolSrc: './SkillIcon/icons8-Responsive-design-100.png', toolAlt: 'Responsive design', toolTitle: 'Responsive design' },
+                        { toolSrc: './SkillIcon/icons8-responsive-design-100.png', toolAlt: 'Responsive design', toolTitle: 'Responsive design' },
                         { toolSrc: './SkillIcon/icons8-git-100.png', toolAlt: 'Git', toolTitle: 'Git' },
                         { toolSrc: './SkillIcon/github.png', toolAlt: 'Github', toolTitle: 'Github' },
                         { toolSrc: './SkillIcon/icons8-figma-100.png', toolAlt: 'Figma', toolTitle: 'Figma' }
