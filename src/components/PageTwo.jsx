@@ -104,7 +104,7 @@ const PageTwo = () => {
                     <h3>What i am <span className='highlight-text'>great</span> at</h3>
                 </div>
                 <div className="text-column">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem facere quibusdam nulla nesciunt inventore, sequi cupiditate quaerat explicabo ad! Est labore adipisci, suscipit maxime dolores eaque cum dicta ad fugit.</p>
+                    <p>These are the skills I've learned over the past three years from school, work experience, and things I enjoy doing in my free time.</p>
                 </div>
             </div>
             <div className="skill-box">

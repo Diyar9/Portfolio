@@ -46,7 +46,7 @@
     position: relative;
     flex: 33.33%;
     max-width: 33.33%;
-    height: 400px;
+    height: 500px;
     background-color: #1A1A19;
     border: 1em solid #DFDFD9;
 }
@@ -178,7 +178,15 @@
     align-items: center;
     text-transform: capitalize;
     text-align: center;
-    padding: 4px 0;
+    padding: 0 0.5em;
+    font-size: 11px;
+}
+
+#githubRepoItem {
+    position: absolute;
+    bottom: -7%;
+    left: 50%;
+    transform: translate(-50%, -7%);
 }
 
 #githubRepoItem img {
@@ -188,7 +196,7 @@
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    margin: 2em 0;
+    margin: 0.5em 0;
     background-color: #DFDFD9;
 }
 
@@ -202,7 +210,7 @@
     display: inherit;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991px) {
     .page4 {
         margin: 0;
     }
@@ -215,5 +223,10 @@
 
     .img-column-overlay {
         opacity: 1;
+    }
+
+    .column-item {
+        padding: 0 0.5em;
+        font-size: 12px;
     }
 }
