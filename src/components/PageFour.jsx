@@ -41,7 +41,7 @@ const ProjectColumn = ({ title, description, imgSrc, tools, repoLink, imgRepo, i
                 <div className="column-item"><h2><span className='highlight-text'>{title}</span></h2></div>
                 <div className="column-item"><p>{description}</p></div>
                 <div className="column-item" id='githubRepoItem'>
-                    <a href={repoLink}><img src={imgRepo} alt={title} /></a>
+                    <a href={repoLink} target="_blank"><img src={imgRepo} alt={title} /></a>
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@ const PageFour = () => {
                     ]}
                     githubSrc="C:\Users\Pc\portfolio\public\SkillIcon\github.png"
                     title="Portfolio"
-                    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+                    description="A collection of my works and projects, showcasing my current skills and a timeline of my past experiences. The project have followed a structured approach where I, as a developer, have designed the UX using the tool Figma and then further developed the project using the React framework. Additionally, the project are responsive, making it accessible on mobile devices as well."
                     imgSrc=".\ProjectIcon\Portfolio.png"
                     imgDate="2023-07-24"
                     repoLink={"https://github.com/Diyar9/portfolio"}
@@ -82,7 +82,7 @@ const PageFour = () => {
                     ]}
                     githubSrc="./ProjectIcon/readmore.png"
                     title="Sileon"
-                    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+                    description="I served as an ambassador for Sileon AB, traveling to their customers in central Sweden to introduce their new invoicing service. I planned and organized my schedule in collaboration with Sileon and met with customers in person to provide live introductions and address their questions."
                     imgSrc=".\ProjectIcon\Sileon.jpg"
                     imgDate="2023-06-07"
                     repoLink={"https://docs.google.com/spreadsheets/d/e/2PACX-1vRTOHbGDj0Oq3As5Xtxuk7znCUYSe_u5XZWVz1L_1wajlK2MKZv7UQTzlHPBXtLVGxXug1Z5T88oSoN/pub?output=pdf"}
@@ -103,7 +103,7 @@ const PageFour = () => {
                     ]}
                     githubSrc="./ProjectIcon/readmore.png"
                     title="Combitech"
-                    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+                    description="During my internship at Combitech AB in Gothenburg, I worked as a systems developer and was tasked with developing a system for autonomous vehicles. In this role, I acted as a full-stack developer, handling both backend, frontend, and database aspects of the project."
                     imgSrc=".\ProjectIcon\Combitech.jpg"
                     imgDate="2023-01-16"
                     repoLink={"https://se370.wordpress.com/"}
@@ -117,7 +117,7 @@ const PageFour = () => {
                     ]}
                     githubSrc="./ProjectIcon/readmore.png"
                     title="RSS"
-                    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+                    description="In my RSS reader project, I utilized C# as the primary programming language, focusing on the graphical user interface (GUI). I followed a three-layer architecture, incorporating user interface design, business logic, and data access layers to effectively manage RSS feeds."
                     imgSrc=".\ProjectIcon\RSS.png"
                     imgDate="2022-10-03"
                     repoLink={"https://github.com/Diyar9/RSS"}
@@ -130,7 +130,7 @@ const PageFour = () => {
                     ]}
                     githubSrc="./ProjectIcon/readmore.png"
                     title="ArtFinder"
-                    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+                    description="Worked on a project for OpenArt where the mission was to find a way to make art more accessible. The idea behind this project was to create a solution that helps residents navigate to art installations using a navigation system. Additionally, the system would provide information about each exhibition and be designed for use by multiple people."
                     imgSrc=".\ProjectIcon\ArtFinder.jpg"
                     imgDate="2022-05-02"
                     repoLink={"https://x6m2nsc5cn.wixsite.com/artfinder"}
@@ -148,7 +148,7 @@ const PageFour = () => {
                     ]}
                     githubSrc="./ProjectIcon/readmore.png"
                     title="DinHatt"
-                    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+                    description="Within this project, our school group had the opportunity to collaborate with a client to develop their system. We employed the agile working method, Scrum, in which one person took on the role of Scrum Master. We utilized Kanban and other agile practices associated with Scrum. The system for this project was built using a custom-made database and a C# GUI."
                     imgSrc=".\ProjectIcon\DinHatt.png"
                     imgDate="2022-03-28"
                     repoLink={"https://dinhatt.blogg.se/"}
@@ -163,7 +163,7 @@ const PageFour = () => {
                     ]}
                     githubSrc="./ProjectIcon/readmore.png"
                     title="MIB"
-                    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit..."
+                    description="MIB is a security system inspired by the Men in Black movie. This system is designed to monitor all registered criminals (aliens), agents, and their equipment. Each agent is responsible for a specific section, and there are various types of access levels, with some agents having higher roles that grant them additional privileges within the system. The system was developed using Java and utilized a pre-existing database, including an ER diagram, which served as a foundation for the system's development."
                     imgSrc=".\ProjectIcon\MIB.png"
                     imgDate="2021-05-03"
                     repoLink={"https://github.com/Diyar9/MIB"}

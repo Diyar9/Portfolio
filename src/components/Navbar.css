@@ -227,7 +227,7 @@ nav {
     display: inherit;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991px) {
     body {
         overflow-x: hidden;
         font-size: small;
@@ -252,9 +252,10 @@ nav {
         transform: rotate(-45deg) translate(-0.60em, 0.625em);
         transition: ease-out 0.5s;
     }
-    
+
     .burger-bar.clicked:nth-child(3) {
         transform: rotate(45deg) translate(-0.65em, -0.625em);
         transition: ease-out 0.5s;
     }
+
 }
