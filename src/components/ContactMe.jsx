@@ -11,7 +11,7 @@ const ContactMe = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_4x77nzi', 'template_wcjl6rd', form.current, 'Q_5IcNBiKfV04g6Pc')
+        emailjs.sendForm('service_kygzcv7', 'template_88j62eh', form.current, 'Q_5IcNBiKfV04g6Pc')
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
