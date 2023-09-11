@@ -62,7 +62,7 @@ const PageTwo = () => {
     const [menuStates, setMenuStates] = useState([
         {
             isOpen: false,
-            title: 'Frontend/Backend',
+            title: 'Full-stack',
             tools: categoryTools['FrontBack'],
         },
         {
