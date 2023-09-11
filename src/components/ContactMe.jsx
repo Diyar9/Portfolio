@@ -8,10 +8,15 @@ import emailjs from '@emailjs/browser';
 const ContactMe = () => {
     const form = useRef();
 
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const userId = process.env.REACT_APP_EMAILJS_USER_ID;
+
+
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_kygzcv7', 'template_88j62eh', form.current, 'gD-MmW8c4XeRRYBIW')
+        emailjs.sendForm(serviceId, templateId, form.current, userId)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
