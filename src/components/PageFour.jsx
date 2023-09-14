@@ -98,6 +98,9 @@ const PageFour = () => {
                         { toolSrc: './SkillIcon/icons8-postgresql-100.png', toolAlt: 'PostgreSQL', toolTitle: 'PostgreSQL' },
                         { toolSrc: './SkillIcon/Blazor.png', toolAlt: 'Blazor', toolTitle: 'Blazor' },
                         { toolSrc: './SkillIcon/icons8-api-100.png', toolAlt: 'Rest API', toolTitle: 'RestAPI' },
+                        { toolSrc: './SkillIcon/icons8-postman-api-100.png', toolAlt: 'Postman', toolTitle: 'Postman' },
+                        { toolSrc: './SkillIcon/icons8-swagger-100.png', toolAlt: 'Swagger', toolTitle: 'Swagger' },
+                        { toolSrc: './SkillIcon/icons8-json-100.png', toolAlt: 'JSON', toolTitle: 'JSON' },
                         { toolSrc: './SkillIcon/icons8-git-100.png', toolAlt: 'Git', toolTitle: 'Git' },
                         { toolSrc: './SkillIcon/icons8-bitbucket-100.png', toolAlt: 'Bitbucket', toolTitle: 'Bitbucket' }
                     ]}
