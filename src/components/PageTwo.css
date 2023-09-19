@@ -90,6 +90,9 @@
         flex: 50%;
         max-width: 50%;
         height: 260px;
+    }
+
+    .skill-container {
         padding: 0px;
     }
 
