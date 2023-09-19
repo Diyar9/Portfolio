@@ -90,10 +90,10 @@
         flex: 50%;
         max-width: 50%;
         height: 260px;
+        padding: 0px;
     }
 
     .skill-container h3 {
         font-size: xx-small;
-        padding: 0px;
     }
 }
